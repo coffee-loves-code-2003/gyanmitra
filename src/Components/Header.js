@@ -1,43 +1,45 @@
 import React from 'react';
 import logo from '../Images/Gyanmitra_24_logo.png';
+import '../Images/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+import '../App.css';
+import { useNavigate } from 'react-router-dom';
+
 function Header() {
+  const navigate=useNavigate();
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light " id="navbar">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+    <Navbar id="Navbar1" expand="lg" className="bg-body-tertiary" >
+      <Container>
+        <Navbar.Brand href="#home"
+        ><a className="navbar-brand" href="#">
           <img src={logo} width="225px" alt="Logo" />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-expanded="false"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#" style={{ fontFamily: 'Poppins' }}>
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#" style={{ fontFamily: 'Poppins' }}>
-                About Us
-              </a>
-            </li>
-          </ul>
-          <button className="btn p-2 my-lg-0 my-2" id="login" style={{ fontFamily: 'Poppins' }}>
-            Login
-          </button>
-          <button className="btn" id="Register" style={{ fontFamily: 'Poppins' }}>
-            Register
-          </button>
-        </div>
-      </div>
-    </nav>
+        </a></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mx-auto" id="navbarSupportedContent">
+            <Nav.Link href="#home" >Home</Nav.Link>
+            <Nav.Link href="#link" >About Us</Nav.Link>
+            <Nav.Link href="#link" >Event</Nav.Link>
+            <Nav.Link href="#link" >Workshop</Nav.Link>
+            <Nav.Link href="#link" >Contact Us</Nav.Link>
+
+            </Nav>
+            <Nav className="ms-auto" id="navbarSupportedContent">
+            <button className="btn p-2 my-lg-0 my-2 ms-auto" id="login" onClick={() => navigate('/login')} style={{fontfamily: 'Poppins'}}>
+                login
+            </button>
+            <button className="btn" id="Register" onClick={() => navigate('/signup')}  style={{fontfamily: 'Poppins'}}>
+                Register
+            </button>
+            </Nav>
+
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

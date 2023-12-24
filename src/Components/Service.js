@@ -4,10 +4,12 @@ import img1 from '../Images/Gyanmitra_24__1_-removebg-preview.png'
 import img2 from '../Images/vecteezy_adoption-and-community-care-logo-template-vector_11139584-removebg-preview.png'
 import img3 from '../Images/portrait-young-african-american-man-with-vr-glasses.jpg'
 import img4 from '../Images/pexels-karolina-grabowska-4491459.jpg'
+import styles from '../Images/section.module.css'
 import { useNavigate } from 'react-router-dom';
 function Service() {
     const navigate=useNavigate();
   return (
+    <body className={`${styles.sectionbody} `}>
     <section id="Home">
       <div className="parallex-header">
         <div className="container">
@@ -25,9 +27,9 @@ function Service() {
           </div>
         </div>
         <div className="container">
-          <div className="content row">
+          <div className= {`${styles.content} row`} >
             <div className="col-md-6 left">
-              <h1 className="primary-color">About Gyanmitra'24</h1>
+              <h1 className=  {`${styles.primary_color}`}>About Gyanmitra'24</h1>
               <p className="text-justify">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptatem excepturi! Dolore cupiditate ea eos aut, beatae ipsa repellendus natus, veritatis quisquam, nobis quam quos saepe! Doloribus fugit eum maiores?              </p>
             </div>
@@ -39,14 +41,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptatem except
         </div>
       </div>
       <div className="container">
-        <div className="container1">
-          <div className="row m-5">
+        <div className={`${styles.container1}`}>
+          <div className={`${styles.row1} row m-5`}>
             <div className="col-md-6 left">
               <h1 style={{ fontFamily: 'Poppins' }}>Technical Events</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nostrum expedita, corporis ullam hic nihil voluptatem odio perferendis, illum voluptas reiciendis eum. In, soluta totam laborum suscipit rem nisi vitae.
               </p>
-              <button className="btn" id="Explore">
+              <button className={`${styles.Explore} btn`} >
                 View All
               </button>
             </div>
@@ -55,7 +57,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptatem except
             </div>
           </div>
 
-          <div className="row m-5">
+          <div className={`${styles.row1} row m-5`}>
             <div className="col-md-6 left">
               <img src={img4} className="w-100" />
             </div>
@@ -64,14 +66,16 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptatem except
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nostrum expedita, corporis ullam hic nihil voluptatem odio perferendis, illum voluptas reiciendis eum. In, soluta totam laborum suscipit rem nisi vitae.
               </p>
-              <button className="btn m-4" id="Explore" onclick={()=>navigate('/workshop')}>
-                View All
-              </button>
+              <button className={`${styles.Explore} btn m-4`} onClick={() => navigate('/workshop')}>
+  View All
+</button>
+
             </div>
           </div>
         </div>
       </div>
     </section>
+    </body>
   );
 }
 

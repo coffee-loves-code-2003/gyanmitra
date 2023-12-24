@@ -1,59 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Poppins:wght@600&display=swap');*
 
-{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
 
-}
-#navbar
-{
-    position:sticky;
-    top:0;
-    left:0;
-    z-index: 100;
-    padding: .5rem 5rem;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.155),
-               -3px -3px 5px rgba(0, 0, 0, 0.084);
-    backdrop-filter: blur(30px); 
-    border-style: none;
-}
-
-.navbar .navbar-brand
-{
-    font-size:25px;
-    color:#0f0f0f
-    
-}
-body
-{
-    align-items: center;
-    justify-content: center;
-    font-family: jura;
-}
-#navbarSupportedContent a
-{
-    color:#ffffff;
-    border-bottom: 2px solid transparent;
-}
-#navbarSupportedContent a:hover
-{
-    border-bottom: 2px solid rgb(255, 0, 34,1);
-
-}
-#navbarSupportedContent #login
-{
-    color:#fff;
-    margin-left:5px;
-}
-#navbarSupportedContent #Register
-{
-    background: black;
-    color:#fff;
-    margin-left:5px;
-    border-radius:15px;
-}
-body
+.workshopbody
 {
     background:linear-gradient(rgba(244, 242, 242, 0.212),
                                 rgba(0,0,0,1)),
@@ -61,7 +9,8 @@ body
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;       
+    background-size: cover; 
+    font-family:'Jura';      
 }
 .title
 {
@@ -82,11 +31,11 @@ body
     right:2.3rem;
 
 }
-.card
+.card1
 {
-    width:90%;
+    width:100%;
     max-width: 400px;
-    padding:5rem 2.5rem;
+   
     border-radius: 1rem;
     border: 1px solid transparent;
     backdrop-filter: blur(1rem);
@@ -101,41 +50,41 @@ body
 {
     color:black;
 
-    background: linear-gradient(to right bottom,rgba(37, 157, 212, 0.2),rgba(248, 162, 13, 0.3));
+    background: linear-gradient(to right bottom,rgba(8, 148, 212, 0.856),rgba(206, 132, 6, 0.829));
 }
 .cb2
 {
     color:black;
-    background: linear-gradient(to right bottom,rgba(255,255,255,0.2),rgba(255,255,255,0.3));
+    background: linear-gradient(to right bottom,rgba(237, 237, 5, 0.886),rgba(6, 78, 223, 0.858));
 }
 .cb3
 {
     color:black;
 
-    background: linear-gradient(to right bottom,rgba(204, 11, 218, 0.354),rgba(248, 162, 13, 0.504));
+    background: linear-gradient(to right bottom,rgba(204, 11, 218, 0.918),rgba(248, 162, 13, 0.89));
 }
 .cb4
 {
     color:black;
-    background: linear-gradient(to right bottom,rgba(239, 9, 36, 0.307),rgba(255,255,255,0.374));
+    background: linear-gradient(to right bottom,rgba(239, 9, 36, 0.87),rgba(183, 68, 68, 0.888));
 }
 .cb5
 {
     color:black;
 
-    background: linear-gradient(to right bottom,rgba(37, 157, 212, 0.450),rgba(248, 162, 13, 0.458));
+    background: linear-gradient(to right bottom,rgba(37, 157, 212, 0.92),rgba(248, 162, 13, 0.861));
 }
 .cb6
 {
     color:black;
-    background: linear-gradient(to right bottom,rgba(208, 244, 5, 0.410),rgba(255,255,255,0.540));
+    background: linear-gradient(to right bottom,rgba(208, 244, 5, 0.877),rgba(151, 55, 55, 0.808));
 }
 
-.btn
+.btn1
 {
     border-radius: 2rem;
 }
-.btn:hover
+.btn1:hover
 {
     box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.3);
 }
@@ -174,15 +123,15 @@ padding:0;
     color:black;
     background: linear-gradient(to right bottom,rgba(208, 244, 5, 0.410),rgba(255,255,255,0.540));
 }
-.nav-tabs .nav-link.active
+.nav-tabs1 .nav-link1.active
 {
     background-color: #00FFD5;
     color: white;
     border: 2px solid #00FFD5;
 }
-.nav-tabs .nav-link
+.nav_tabs1 .nav_link1
 {
-    background-color: rgba(255, 255, 255, 0.119);
+    background-color: #1a8f661e;
     color: #e6dfe5;
     border: 2px solid #0efda9;
     margin-right: 1rem;
@@ -244,9 +193,9 @@ label
 
 
 
-.row .btn
+.btn1
 {
-    padding: 15px 40px;
+    padding: 15px 15px;
     border: none;
     outline: none;
     color:#fff;
@@ -254,7 +203,7 @@ label
     z-index: 0;
     border-radius: 12px;
 }
-.row .btn::after
+.btn1::after
 {
     content: '';
     z-index: -1;
@@ -267,7 +216,7 @@ label
     border-radius: 10px;
 
 }
-.row .btn::before
+.btn1::before
 {
     content: '';
     background: linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,
